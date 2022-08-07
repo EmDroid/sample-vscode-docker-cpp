@@ -1,0 +1,4 @@
+{
+    "cmake.buildDirectory": "/build/${buildType}",
+    "cmake.generator": "Ninja",
+}
