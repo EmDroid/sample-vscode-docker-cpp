@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  bldvol:
+
+services:
+
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace   # bind mount the host project directory
+      - bldvol:/build   # store build artifacts on a docker volume
+    # keep open (do not auto-close)
+    tty: true
+    # alternatively ("tty" not working in some cases):
+    # command: sleep infinity
