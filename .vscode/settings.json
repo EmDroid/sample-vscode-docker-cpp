@@ -1,4 +1,23 @@
 {
     "cmake.buildDirectory": "/build/${buildType}",
     "cmake.generator": "Ninja",
+
+    "clangd.arguments": [
+        "-background-index",
+        "-compile-commands-dir=/build/Debug",
+        "--completion-style=detailed",
+        "--header-insertion=never"
+    ],
+
+    "C_Cpp.intelliSenseEngine": "Disabled",
+
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [80,120],
+
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    },
 }
