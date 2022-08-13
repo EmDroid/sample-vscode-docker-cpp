@@ -2,6 +2,7 @@ version: '3'
 
 volumes:
   bldvol:
+  cchvol:
 
 services:
 
@@ -12,6 +13,9 @@ services:
     volumes:
       - ..:/workspace   # bind mount the host project directory
       - bldvol:/build   # store build artifacts on a docker volume
+      - cchvol:/ccache  # ccache docker volume
+    environment:
+      - CCACHE_DIR=/ccache
     # keep open (do not auto-close)
     tty: true
     # alternatively ("tty" not working in some cases):

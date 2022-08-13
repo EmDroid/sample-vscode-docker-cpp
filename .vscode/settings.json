@@ -1,6 +1,10 @@
 {
     "cmake.buildDirectory": "/build/${buildType}",
     "cmake.generator": "Ninja",
+    "cmake.configureArgs": [
+        "-DCMAKE_CXX_COMPILER_LAUNCHER=ccache",
+        "-DCMAKE_C_COMPILER_LAUNCHER=ccache"
+    ],
 
     "clangd.arguments": [
         "-background-index",
