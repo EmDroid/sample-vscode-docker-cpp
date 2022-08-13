@@ -1,6 +1,7 @@
 version: '3'
 
 volumes:
+  usrvol:
   bldvol:
   cchvol:
 
@@ -12,6 +13,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace   # bind mount the host project directory
+      - usrvol:/root    # persist the home directory (bash_history etc.)
       - bldvol:/build   # store build artifacts on a docker volume
       - cchvol:/ccache  # ccache docker volume
     environment:
