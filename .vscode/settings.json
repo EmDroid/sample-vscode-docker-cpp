@@ -24,4 +24,18 @@
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
     },
+
+    "triggerTaskOnSave.tasks": {
+        "build all check": [
+            "**/*.hpp",
+            "**/*.inl",
+            "**/*.cpp",
+            "**/CMake*.*",
+            "**/*.cmake",
+        ]
+    },
+    "triggerTaskOnSave.selectedTask": "build all",
+    "triggerTaskOnSave.on": true,
+    "triggerTaskOnSave.restart": true,
+    "triggerTaskOnSave.showNotifications": true,
 }
