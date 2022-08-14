@@ -1,0 +1,52 @@
+---
+
+# We'll use defaults from the Mozilla style
+BasedOnStyle: Mozilla
+
+---
+
+# C++ settings different from the default style
+Language:       Cpp
+
+Standard:       Cpp03
+
+ColumnLimit:    0
+IndentWidth:    4
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 8
+AccessModifierOffset:   -4
+
+BreakBeforeBraces:  Custom
+BraceWrapping:
+  AfterClass:       true
+  AfterControlStatement: true
+  AfterCaseLabel:   true
+  AfterEnum:        true
+  AfterFunction:    true
+  AfterNamespace:   false
+  AfterStruct:      true
+  AfterUnion:       true
+  BeforeCatch:      true
+  BeforeElse:       true
+  IndentBraces:     false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: true
+
+BinPackArguments:   true
+BinPackParameters:  true
+
+SortIncludes:   false
+ReflowComments: false
+FixNamespaceComments: true
+
+MaxEmptyLinesToKeep:  2
+SpacesBeforeTrailingComments: 2
+SpaceAfterCStyleCast: true
+
+AlignConsecutiveAssignments:  true
+AlignEscapedNewlines: Left
+
+---
+
+# EOF #
